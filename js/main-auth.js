@@ -117,25 +117,10 @@ if (path.includes('login.html')) {
 }
 
 
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    navbarLogoutBtn.classList.add("show");
-    navbarLogoutBtn.classList.remove("hide");
-
-    navbarLoginBtn.classList.add("hide");
-    navbarLoginBtn.classList.remove("show");
-  } else {
-    navbarLoginBtn.classList.add("show");
-    navbarLoginBtn.classList.remove("hide");
-
-    navbarLogoutBtn.classList.add("hide");
-    navbarLogoutBtn.classList.remove("show");
-  }
-});
 // logout
-
-if (navbarLogoutBtn) {
-    logoutBtn.addEventListener('click', async()=> {
+const logOutBtn = document.getElementById('logOut');
+if (logOutBtn) {
+    logOutBtn.addEventListener('click', async()=> {
         try{
             await handelLogout();
             alert("Logged out successfully");
@@ -145,6 +130,4 @@ if (navbarLogoutBtn) {
         }
         })
 }
-
-console.log(loginBtn);
 
