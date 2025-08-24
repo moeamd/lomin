@@ -14,6 +14,108 @@
       </style> -->
   </head>
   <body>
+<!-- Navbar -->
+<nav>
+    <div class="menue-icon">
+        <img src="image/login-images/Menue icon.svg" alt="" />
+    </div>
+
+    <div class="left-section">
+        <a href="index.html">
+            <div class="logo-section">
+                <div class="logo-img">
+                    <img src="image/login-images/Logo.svg" alt="" />
+                </div>
+                <h2>Luminae</h2>
+            </div>
+        </a>
+
+        <div class="search-section">
+            <form action="" onsubmit="return false;">
+                <input type="text" placeholder="Search Products" id="searchInput" />
+                <select id="categorySelect">
+                    <option value="">All Categories</option>
+                </select>
+                <div class="search-icon" onclick="performSearch()">
+                    <img src="image/login-images/Search.svg" alt="Search" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="right-section2">
+        <div class="links-nav">
+            <ul>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">Help & support</a></li>
+                <li><a href="about.html">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="social-nav">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-telegram"></i>
+        </div>
+    </div>
+
+    <div class="shopIcon-section">
+        <div class="shop-icon">
+            <img src="image/login-images/Cards.svg" alt="" />
+        </div>
+        <div class="shop-quantity">
+            <h3>0</h3>
+        </div>
+    </div>
+</nav>
+
+<!-- Bottom Navbar -->
+<section class="bottom-nav">
+    <div class="categories">
+        <img src="image/login-images/categories.svg" alt="" style="width: 40px" />
+        <h2>Categories</h2>
+    </div>
+
+    <div class="selection">
+        <select><option>USD</option></select>
+        <select><option>English</option></select>
+    </div>
+
+    <div class="pages">
+        <div style="display: none" id="dashboardLink">
+            <img src="image/login-images/Sign in.svg" alt="" />
+            <a href="dashboard/products.html"><h4>Dashboard</h4></a>
+        </div>
+        <div style="display: none" id="userOrders">
+            <img src="image/login-images/Sign in.svg" alt="" />
+            <a href="orders.html"><h4>My orders</h4></a>
+        </div>
+        <div>
+            <img src="image/login-images/Card.svg" alt="" />
+            <a href="products.html"><h4>Products</h4></a>
+        </div>
+
+        <div id="logOutBtn" class="hide">
+            <img src="image/login-images/Sign in.svg" alt="" />
+            <a href="login.html"><h4>logout</h4></a>
+        </div>
+        <div>
+            <img src="image/login-images/Sign in.svg" alt="" />
+            <a href="wishlist.html"><h4>Favorites</h4></a>
+        </div>
+        <div class="shopIcon-section">
+            <img src="image/login-images/Card.svg" alt="" />
+            <a href="cartnada.html"><h4>Cart</h4></a>
+            <!-- <div class="shop-quantity">
+                <h4>0</h4>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+
+
+
       <ul class="firstul">
               <li>CARD</li>
               <li>Customer  info</li>
@@ -24,8 +126,8 @@
       <p>card </p>
 
 
-<div class="container">
-
+<div id="container" class="container">
+<!-- 
 <div class="item">
     <img src="image\imgnada\photon2.png" width="60px">
     <p>2 Pieces Mango set- Regular fit</p>
@@ -63,8 +165,11 @@
   <button onclick="removeItem(this)">
     <i class="fa-solid fa-trash-can"></i>
   </button>
-</div>
+</div> -->
 
+
+
+</div>
 <div class="right-section">
 <table  >
     <caption style="text-align: start;">Order Summary</caption>
@@ -91,11 +196,38 @@
       </table>
   </div>
 
+<!-- Footer -->
+<footer>
+    <div class="top-footer">
+        <ul><li><h3>Company</h3></li><li>About Us</li><li>Our Store</li><li>Contacts Us</li></ul>
+        <ul><li><h3>Career Opportunities</h3></li><li>Selling Programs</li><li>Advertise</li><li>Cooperation</li></ul>
+        <ul><li><h3>How to Buy</h3></li><li>Making Payments</li><li>Delivery Options</li><li>Buyer Protection</li><li>New User Guide</li></ul>
+        <ul><li><h3>Help</h3></li><li>Contacts Us</li><li>FAQ</li><li>Privacy Policy</li></ul>
+    </div>
 
-
-
-
+    <div class="bottom-footer">
+        <div class="payment-secctoin">
+            <div>
+                <img src="image/login-images/image-112.svg" alt="" />
+                <img src="image/login-images/image-113.svg" alt="" />
+                <img src="image/login-images/image-114.svg" alt="" />
+            </div>
+            <select><option value="">English</option></select>
+        </div>
+        <span class="line"></span>
+        <div class="copyright">
+            <h3>165-179 Forster Road City of Monash, Melbourne, Australia</h3>
+            <p>©2023 Copyright in reserved for Luminae shop</p>
+            <div class="social-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-telegram"></i>
+            </div>
+        </div>
+    </div>
+</footer>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="module" src="./js/cart.js"></script>
   <script type="module" src="js/cartLogic.js"></script>
   <script>
 
@@ -141,7 +273,6 @@
   </script>
 
 
-  <script type="module" src="./js/cart.js"></script>
 
   </body>
 
